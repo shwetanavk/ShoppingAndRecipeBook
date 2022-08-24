@@ -29,7 +29,7 @@ import { RecipeService } from './recipes/recipe.service';
     DropdownDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
