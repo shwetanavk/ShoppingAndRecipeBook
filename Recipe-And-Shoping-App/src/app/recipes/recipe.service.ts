@@ -19,8 +19,7 @@ export class RecipeService {
     new Recipe(
       'Another test recipe',
       'This is a testtttttttttttt',
-      'https://aheadofourthyme.com/wp-content/uploads/2022/04/air-fryer-salmon-recipe-3.jpg',
-
+      'https://www.averiecooks.com/wp-content/uploads/2021/01/garlicbutterchicken-5.jpg',
       [
         new Ingredient('Bread', 1),
         new Ingredient('Potato', 2),
@@ -31,8 +30,12 @@ export class RecipeService {
 
   constructor(private shoppingListService: ShoppingListService) {}
 
-  getRecipe() {
+  getRecipes() {
     return this.recipes.slice(); //new reference to the recipes array
+  }
+
+  getRecipe(index) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingListService(ing: Ingredient[]) {
